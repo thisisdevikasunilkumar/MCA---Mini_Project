@@ -1,0 +1,475 @@
+/* ================= GOOGLE FONTS ================= */
+/* Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Kaushan Script */
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+
+/* Inter */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Libre Caslon Text */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap");
+
+/* ================= GLOBAL STYLES ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header section setup */
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Background SVG wave */
+.svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 50px;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 40px;
+}
+
+/* Logo (hidden until scroll) */
+.navbar-logo {
+  width: 298px;
+  height: 71px;
+  margin-right: auto;
+  display: none;
+  transition: opacity 0.5s ease;
+}
+
+/* Navbar solid effect on scroll */
+.navbar.solid .navbar-logo {
+  display: block;
+  opacity: 1;
+}
+
+.navbar.solid {
+  transition: 0.5s ease;
+}
+
+.navbar.solid .menu-items a {
+  color: black;
+}
+
+.navbar.solid .menu-items a:hover {
+  border-bottom: 2px solid black;
+}
+
+.navbar.solid .btn-login {
+  background: #273036;
+  color: white;
+  transition: 0.3s ease;
+}
+
+/* Navbar menu */
+.menu-items {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.menu-items a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+/* Login button */
+.btn-login {
+  margin-left: 100px;
+  margin-right: 50px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  color: #273036;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ================= HOME SECTION ================= */
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 8% 40px;
+  gap: 40px;
+}
+
+.home-text {
+  flex: 1;
+}
+
+.home-text h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000;
+  margin-top: 155px;
+}
+
+.home-text p {
+  margin-top: 20px;
+  font-size: 1.25rem;
+  color: #333;
+  line-height: 1.6;
+  font-family: 'Libre Caslon Text';
+}
+
+.home-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn-start {
+  background: #273036;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-demo {
+  background: transparent;
+  width: auto;
+  height: auto;
+  color: #273036;
+  border: 2px solid #273036;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.home-logo img {
+  margin-top: 100px;
+  width: 563px;
+  height: 349px
+}
+
+/* ================= FEATURES SECTION ================= */
+.features-section {
+  text-align: center;
+  padding: 50px 20px;
+  min-height: 100vh;
+}
+
+.features-section h2 {
+  margin-top: 100px;
+  text-align: center;
+  color: black;
+  font-size: 80px;
+  font-family: 'Inter';
+  font-weight: 900;
+  word-wrap: break-word;
+}
+
+/* Features grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 50px;
+  justify-items: center;
+  max-width: 1000px;
+  margin: 100px auto;
+}
+
+/* Individual feature card */
+.feature-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  cursor: none;
+  transition: all 0.5s;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.feature-card:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.feature-card:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.feature-card img {
+  width: 50px;
+  height: 50px;
+}
+
+.feature-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #333;
+  margin: 5px 0 0 0;
+  text-align: left;
+}
+
+
+/* ================= PRICING SECTION ================= */
+.pricing-section {
+  padding: 50px 20px;
+  min-height: 100vh;
+}
+
+.pricing-section h1 {
+  margin-bottom: 40px;
+  margin-top: 100px;
+  text-align: center;
+  color: black;
+  font-size: 80px;
+  font-family: 'Inter';
+  font-weight: 900;
+  word-wrap: break-word;
+}
+
+/* Pricing cards layout */
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Individual card */
+.card {
+  background: white;
+  padding: 30px;
+  width: 280px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.price span {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.card p {
+  margin: 15px 0 25px;
+  color: #444;
+}
+
+.btn {
+  background: #1f2937;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background: #111827;
+}
+
+/* ================= RESPONSIVE STYLES ================= */
+
+/* Tablet view */
+@media (max-width: 1024px) {
+  /* Navbar */
+  .navbar-container {
+    padding: 0 20px;
+  }
+  .menu-items {
+    gap: 20px;
+  }
+  .btn-login {
+    margin-left: 40px;
+    margin-right: 20px;
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+
+  /* Home section */
+  .home-text h1 {
+    font-size: 2.8rem;
+  }
+  .home-text p {
+    font-size: 1.1rem;
+  }
+  .home-logo img {
+    width: 420px;
+    height: auto;
+  }
+  .home-buttons {
+    display: flex;
+    gap: 15px;
+  }
+  .btn-start,
+  .btn-demo {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    width: 180px;
+  }
+
+  /* Features */
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  /* Pricing */
+  .pricing-cards {
+    gap: 20px;
+  }
+  .card {
+    width: 250px;
+    padding: 25px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  /* Navbar */
+  .menu-items {
+    display: none; /* Hide menu items for mobile */
+  }
+  .navbar-container {
+    justify-content: space-between;
+  }
+  .navbar-logo {
+    display: block !important;
+    width: 200px;
+    height: auto;
+  }
+
+  /* Add hamburger menu */
+  .navbar::after {
+    content: "☰";
+    font-size: 26px;
+    cursor: pointer;
+    color: #fff;
+    margin-left: auto;
+  }
+
+  /* Home section */
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 20px 40px;
+  }
+  .home-text h1 {
+    font-size: 2.2rem;
+    margin-top: 50px;
+  }
+  .home-text p {
+    font-size: 1rem;
+  }
+  .home-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .home-logo img {
+    display: none;
+  }
+
+  /* Features */
+  .features-section h2 {
+    font-size: 40px;
+  }
+  .feature-card {
+    max-width: 100%;
+  }
+
+  /* Pricing */
+  .pricing-section h1 {
+    font-size: 40px;
+  }
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* Small mobile view */
+@media (max-width: 480px) {
+  .home-text h1 {
+    font-size: 1.8rem;
+  }
+  .home-text p {
+    font-size: 0.95rem;
+  }
+  .btn-start,
+  .btn-demo,
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+  .features-section h2,
+  .pricing-section h1 {
+    font-size: 32px;
+  }
+}

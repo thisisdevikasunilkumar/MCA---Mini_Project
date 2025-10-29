@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login/Registration Form</title>
+    <link rel="icon" type="image/x-icon" href="image/procezo-title-logo.png">
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/Login_Registration.css' %}">
+    <!-- Boxicons (for social icons like Google, Facebook, etc.) -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Main container -->
+    <div class="container">
+
+      <!-- LOGIN BOX -->
+      <div class="form-box login">
+        <form method="POST" action="">
+        {% csrf_token %}
+          <h1>Login</h1>
+
+          <!-- Username field -->
+          <div class="input-box">
+            <input type="text" placeholder="Username" required />
+            <img class="logoIcons" src="Image/user.png" alt="user-logo">
+          </div>
+
+          <!-- Password field -->
+          <div class="input-box">
+            <input type="password" placeholder="Password" required />
+            <img class="logoIcons" src="Image/padlock.png" alt="password-logo">
+          </div>
+
+          <!-- Forgot password link -->
+          <div class="forgot-link">
+            <a href="#">Forgot Password?</a>
+          </div>
+
+          <!-- Login button -->
+          <button type="submit" class="btn">Login</button>
+
+          <!-- Social login -->
+          <p>or login with social platforms</p>
+          <div class="social-icons">
+            <a href="#"><i class="bx bxl-google"></i></a>
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-github"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+          </div>
+        </form>
+      </div>
+
+      <!-- REGISTRATION BOX -->
+      <div class="form-box register">
+        <form method="POST" action="">
+        {% csrf_token %}
+          <h1>Registration</h1>
+
+          <!-- Username field -->
+          <div class="input-box">
+            <input type="text" placeholder="Username" required />
+            <img class="logoIcons" src="Image/user.png" alt="user-logo">
+          </div>
+
+          <!-- Email field -->
+          <div class="input-box">
+            <input type="email" placeholder="Email" required />
+            <img class="logoIcons" src="Image/communication.png" alt="mail-logo">
+          </div>
+
+          <!-- Password field -->
+          <div class="input-box">
+            <input type="password" placeholder="Password" required />
+            <img class="logoIcons" src="Image/padlock.png" alt="password-logo">
+          </div>
+
+          <!-- Register button -->
+          <button type="submit" class="btn">Register</button>
+
+          <!-- Social register -->
+          <p>or register with social platforms</p>
+          <div class="social-icons">
+            <a href="#"><i class="bx bxl-google"></i></a>
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-github"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+          </div>
+        </form>
+      </div>
+
+      <!-- TOGGLE PANELS -->
+      <div class="toggle-box">
+
+        <!-- LEFT TOGGLE (Welcome for new users) -->
+        <div class="toggle-panel toggle-left">
+          <img src="image/procezo-main-logo.png" alt="Procezo Logo" class="logo">
+          <h2>Hello, Welcome!</h2>
+          <p>Don't have an account?</p>
+          <button class="btn register-btn">Register</button>
+        </div>
+
+        <!-- RIGHT TOGGLE (Welcome back for existing users) -->
+        <div class="toggle-panel toggle-right">
+          <img src="image/procezo-main-logo.png" alt="Procezo Logo" class="logo">
+          <h2>Welcome Back!</h2>
+          <p>Already have an account?</p>
+          <button class="btn login-btn">Login</button>
+        </div>
+      </div>
+    </div>
+    <!-- Script file for toggle animations -->
+    <script src="{% static 'js/Login_Registration.js' %}"></script>
+  </body>
+</html>
