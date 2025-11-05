@@ -48,6 +48,7 @@
 
 3. **Configure Django**
    - Open `settings.py` and update:
+     
    ```bash
    DATABASES = {
      'default': {
@@ -71,6 +72,7 @@
 
 4. **Access the Application**
    - Open in your browser:
+     
    ```bash
      http://127.0.0.1:8000/
    
