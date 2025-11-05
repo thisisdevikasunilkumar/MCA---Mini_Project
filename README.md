@@ -87,4 +87,4 @@
 ---
 
 ### 📌 Note
-This project was developed as part of the **MCA Academic Year Project** and is intended purely for learning and academic purposes.
+This project was developed as part of the **MCA 3rd Semester Mini Project** and is intended purely for learning and academic purposes.
