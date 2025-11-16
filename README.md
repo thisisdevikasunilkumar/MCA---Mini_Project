@@ -79,10 +79,10 @@
 ---   
 
 ## 👥 Team Members
-- Devika Sunilkumar
-- Diya V P
-- Hitha Krishna P R
-- Tina Paul C
+- [Devika Sunilkumar](https://github.com/thisisdevikasunilkumar)
+- [Diya V P](https://github.com/diyaprince)
+- [Hitha Krishna P R](https://github.com/HithaKrishna)
+- [Tina Paul C](https://github.com/tinachirammal2002)
 
 ---
 
